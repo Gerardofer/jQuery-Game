@@ -1,0 +1,35 @@
+body {
+	background-image: url("../images/norbert-levajsics-203627.jpg");
+	background-position: center;
+	background-size: cover;
+	background-attachment: fixed, scroll; 
+}
+
+img {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+}
+
+img:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+}
+
+.crystals {
+	width: 170px;
+	height: 170px;
+
+}
+
+.col-md-4 {
+	margin-top: 30px;
+}
+
+.panel-body{
+	height: 150px;
+}
+
+#midRow {
+	margin-left: 35px;
+}
+
