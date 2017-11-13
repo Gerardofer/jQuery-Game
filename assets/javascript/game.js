@@ -17,6 +17,7 @@ $(document).ready(function(){
 	var userTotal = 0;
 	var wins = 0;
 	var losses = 0;
+
 	// var ruby = false;
 	// var emeral = false;
 	// var diamond = false;
@@ -25,6 +26,9 @@ $(document).ready(function(){
 	// var cryDia = $("#diamond")
 	// var cryEme = $("#emeral")
 	// var cryTopaz = $("#topaz")
+
+	
+	$('#userScore').html(userTotal);
 	
 	
 	for (var i = 0; i < rocksArr.length; i++) {
@@ -37,7 +41,9 @@ $(document).ready(function(){
 		rubyVal = parseInt(rubyVal);
 		userTotal += rubyVal;
 		$('#userScore').html(userTotal);
-		console.log(userTotal);
+		WinLossReset();
+		// gameReset();
+
 	});	
 
 	$('#diamond').on('click', function(){
@@ -45,7 +51,8 @@ $(document).ready(function(){
 		diaVal = parseInt(diaVal);
 		userTotal += diaVal;
 		$('#userScore').html(userTotal);
-		console.log(userTotal);
+		WinLossReset();
+		// gameReset();
 	});
 
 	$('#emeral').on('click', function(){
@@ -53,7 +60,8 @@ $(document).ready(function(){
 		emeVal = parseInt(emeVal);
 		userTotal += emeVal;
 		$('#userScore').html(userTotal);
-		console.log(userTotal);
+		WinLossReset();
+		// gameReset();
 	});
 
 	$('#topaz').on('click', function(){
@@ -61,23 +69,42 @@ $(document).ready(function(){
 		topVal = parseInt(topVal);
 		userTotal += topVal;
 		$('#userScore').html(userTotal);
-		console.log(userTotal);
+		WinLossReset();
+		// gameReset();
 	});
 
-	function WinLoss(){
+	function WinLossReset(){
 		if (userTotal === randomNum){
 			wins++;
+			userTotal = 0;
+			randomNum = Math.floor((Math.random() * (120 - 19 + 1) + 19));
+			$('#score').text(randomNum);
+			$('#userScore').html(userTotal);
 			$('#win-loss').text("Well Done!");
 			$('#wins').text(wins);
 		}
-		if (userTotal >= randomNum){
+		if (userTotal > randomNum){
 			losses++;
+			userTotal = 0;
+			randomNum = Math.floor((Math.random() * (120 - 19 + 1) + 19));
+			$('#score').text(randomNum);
+			$('#userScore').html(userTotal);
 			$('#win-loss').text("Better luck next time!");
 			$('#loss').text(losses);
 		}
 	}
 
-	WinLoss()
+	// function gameReset(){
+	// 	if (userTotal === randomNum || userTotal > randomNum){
+	// 		userTotal = 0;
+	// 		// $('#userScore').html(userTotal);
+	// 		var randomNum = Math.floor((Math.random() * (120 - 19 + 1) + 19));
+	// 		$('#score').text(randomNum);
+			
+	// 	}
+	// }
+
+
 
 });
 
@@ -88,9 +115,6 @@ $(document).ready(function(){
 //if user's score === random number (WIN), else (LOSS).
 //game should re-start without refreshing the page.
 
-	// $('.crystals').on('click', function(){
-		
-	// 	console.log('you clicked');
 		
 	
 
