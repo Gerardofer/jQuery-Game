@@ -29,6 +29,16 @@ img:hover {
 	height: 150px;
 }
 
+.panel-title {
+	font-size: 30px;
+	text-align: center;
+	font-weight: bold;
+}
+
+.userData {
+	font-size: 20px;
+}
+
 #midRow {
 	margin-left: 45px;
 }
@@ -41,5 +51,13 @@ img:hover {
 #userScore {
 	text-align: center;
 	font-size: 70px;	
+}
+
+#name {
+	font-weight: bold;
+}
+
+#win-loss {
+	font-size: 20px;
 }
 

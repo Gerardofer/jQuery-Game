@@ -18,15 +18,6 @@ $(document).ready(function(){
 	var wins = 0;
 	var losses = 0;
 
-	// var ruby = false;
-	// var emeral = false;
-	// var diamond = false;
-	// var topaz = false;
-	// var cryRuby = $("#ruby")
-	// var cryDia = $("#diamond")
-	// var cryEme = $("#emeral")
-	// var cryTopaz = $("#topaz")
-
 	
 	$('#userScore').html(userTotal);
 	
@@ -42,7 +33,7 @@ $(document).ready(function(){
 		userTotal += rubyVal;
 		$('#userScore').html(userTotal);
 		WinLossReset();
-		// gameReset();
+		
 
 	});	
 
@@ -52,7 +43,7 @@ $(document).ready(function(){
 		userTotal += diaVal;
 		$('#userScore').html(userTotal);
 		WinLossReset();
-		// gameReset();
+		
 	});
 
 	$('#emeral').on('click', function(){
@@ -61,7 +52,7 @@ $(document).ready(function(){
 		userTotal += emeVal;
 		$('#userScore').html(userTotal);
 		WinLossReset();
-		// gameReset();
+		
 	});
 
 	$('#topaz').on('click', function(){
@@ -70,7 +61,7 @@ $(document).ready(function(){
 		userTotal += topVal;
 		$('#userScore').html(userTotal);
 		WinLossReset();
-		// gameReset();
+		
 	});
 
 	function WinLossReset(){
@@ -78,7 +69,12 @@ $(document).ready(function(){
 			wins++;
 			userTotal = 0;
 			randomNum = Math.floor((Math.random() * (120 - 19 + 1) + 19));
+			numbRan = [];
 			$('#score').text(randomNum);
+			for (var i = 0; i < rocksArr.length; i++) {
+				crystalRanNum = Math.floor(Math.random() * 12) + 1;
+				numbRan.push(crystalRanNum);
+			}
 			$('#userScore').html(userTotal);
 			$('#win-loss').text("Well Done!");
 			$('#wins').text(wins);
@@ -87,22 +83,18 @@ $(document).ready(function(){
 			losses++;
 			userTotal = 0;
 			randomNum = Math.floor((Math.random() * (120 - 19 + 1) + 19));
+			numbRan = [];
 			$('#score').text(randomNum);
+			for (var i = 0; i < rocksArr.length; i++) {
+				crystalRanNum = Math.floor(Math.random() * 12) + 1;
+				numbRan.push(crystalRanNum);
+			}
 			$('#userScore').html(userTotal);
 			$('#win-loss').text("Better luck next time!");
 			$('#loss').text(losses);
 		}
 	}
 
-	// function gameReset(){
-	// 	if (userTotal === randomNum || userTotal > randomNum){
-	// 		userTotal = 0;
-	// 		// $('#userScore').html(userTotal);
-	// 		var randomNum = Math.floor((Math.random() * (120 - 19 + 1) + 19));
-	// 		$('#score').text(randomNum);
-			
-	// 	}
-	// }
 
 
 
