@@ -35,6 +35,7 @@ $(document).ready(function(){
 		var rubyVal = numbRan[0];
 		rubyVal = parseInt(rubyVal);
 		userTotal += rubyVal;
+		$('#userScore').html(userTotal);
 		console.log(userTotal);
 	});	
 
@@ -42,6 +43,7 @@ $(document).ready(function(){
 		var diaVal = numbRan[1];		
 		diaVal = parseInt(diaVal);
 		userTotal += diaVal;
+		$('#userScore').html(userTotal);
 		console.log(userTotal);
 	});
 
@@ -49,6 +51,7 @@ $(document).ready(function(){
 		var emeVal = numbRan[2];
 		emeVal = parseInt(emeVal);
 		userTotal += emeVal;
+		$('#userScore').html(userTotal);
 		console.log(userTotal);
 	});
 
@@ -56,6 +59,7 @@ $(document).ready(function(){
 		var topVal = numbRan[3];
 		topVal = parseInt(topVal);
 		userTotal += topVal;
+		$('#userScore').html(userTotal);
 		console.log(userTotal);
 	});
 
