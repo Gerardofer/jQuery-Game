@@ -9,17 +9,6 @@ $(document).ready(function(){
 	var randomNum = Math.floor((Math.random() * (120 - 19 + 1) + 19));
 
 	$('#score').text(randomNum);
-
-	// var crystalRandom = Math.floor(Math.random() * 12) + 1;
-
-	// for (var i = 0; i < 4; i++){
-
-	// 	var imageCrystal = $(".crystals");
-	// 	imageCrystal.attr("crystal-val", randomNum);
-
-	// 	console.log(imageCrystal);
-
-	
 	
 //A random number beetwen 1 and 12 needs to be assigned to each crystal.
 	
@@ -36,19 +25,11 @@ $(document).ready(function(){
 	var cryEme = $("#emeral")
 	var cryTopaz = $("#topaz")
 	
-	function rockVal(){	
-		for (var i = 0; i < rocksArr.length; i++) {
-			crystalRanNum = Math.floor(Math.random() * 12) + 1;
-			numbRan.push(crystalRanNum);
-		}
-	};
-		cryRuby.attr("value", numbRan[0]);
-		cryDia.attr("value", numbRan[1]);
-		cryEme.attr("value", numbRan[2]);
-		cryTopaz.attr("value", numbRan[3]);
-
-		console.log(numbRan);
-		// console.log(rocksArr);
+	
+	for (var i = 0; i < rocksArr.length; i++) {
+		crystalRanNum = Math.floor(Math.random() * 12) + 1;
+		numbRan.push(crystalRanNum);
+	}
 
 	$('#ruby').on('click', function(){
 		var rubyVal = numbRan[0];
@@ -77,9 +58,6 @@ $(document).ready(function(){
 		userTotal += topVal;
 		console.log(userTotal);
 	});
-
-	rockVal();		
-
 
 });
 
