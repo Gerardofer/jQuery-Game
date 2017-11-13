@@ -1,5 +1,5 @@
 body {
-	background-image: url("../images/norbert-levajsics-203627.jpg");
+	background-image: url("../images/ugur-akdemir-238673.jpg");
 	background-position: center;
 	background-size: cover;
 	background-attachment: fixed, scroll; 
@@ -45,6 +45,11 @@ h2 {
 
 .userData {
 	font-size: 20px;
+}
+
+div.jumbotron {
+	background-color: #f4f2f2;
+	opacity: 0.87;
 }
 
 #midRow {
