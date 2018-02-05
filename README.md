@@ -1,2 +1,2 @@
-# week-4-game
-week 4 game
+# jQuery based game 
+This is a simple game build on javaScript using jQuery.  The purpose of the game is to click on different stones that have a random value, and as the user clicks ob the stones there is a counter adding up the value of the stones.  The Game ends by either matching the value that's given to the user at the start of the game, which would be a win, or by going above such value which would then be considered a loss.  
